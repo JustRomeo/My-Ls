@@ -37,7 +37,7 @@ int user_file(struct dirent *print, struct stat sb, printer *strct)
 {
     struct passwd *wd;
     struct group *wp;
-    
+
     wd = getpwuid(sb.st_uid);
     strct->users = wd->pw_name;
     strct->users = my_strcat(strct->users, " ");

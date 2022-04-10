@@ -66,7 +66,7 @@ int ll(DIR *fd, char *filepath)
     struct stat sb;
     printer strct[200];
     int n = 0;
-    
+
     struct_malloc(strct[n]);
     print = readdir(fd);
     while (print != NULL) {

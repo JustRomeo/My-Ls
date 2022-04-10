@@ -9,8 +9,8 @@
 
 int my_ls(int ac, char **argv)
 {
-    DIR *fd = opendir("./");
     int z = ac - 1;
+    DIR *fd = opendir("./");
     char *filepath = malloc(sizeof(char) * 100);
 
     filepath = "./";
@@ -27,4 +27,5 @@ int my_ls(int ac, char **argv)
         z --;
     }
     ls(fd);
+    return 0;
 }

@@ -15,12 +15,8 @@ SRC =	$(SRCF)base.c		\
 		$(SRCF)ll_bis.c		\
 		$(SRCF)lr.c			\
 		$(SRCF)ls.c			\
-		$(SRCF)main.c		\
-
-SRCC =	main.c	\
 
 OBJ =	$(SRC:.c=.o)
-OBJC =	$(SRCC:.c=.o)
 
 NAME =	my_ls
 CRITERION = unit_tests
@@ -38,7 +34,7 @@ all:	$(NAME)
 
 $(NAME):	$(OBJ)
 			make -C ./lib/my
-			gcc -o $(NAME) $(OBJ) $(CFLAGS) $(CUR) $(WALL)
+			gcc -o $(NAME) $(OBJ) $(SRCF)main.c $(CFLAGS) $(CUR) $(WALL)
 			rm -f $(OBJ)
 			rm -f ../lib/my/libmy.a
 			rm -f lib/my/libmy.a
@@ -67,18 +63,18 @@ error:		$(NAME)
 			clear
 			./$(NAME) maps/errormap
 
-tests_run:	$(OBJC)
+tests_run:	$(OBJ)
 			make -C ./lib/my
-			gcc -o $(CRITERION) $(OBJC) $(INC) $(LIB) $(CUR) $(CRIT)
-			rm -f $(OBJC)
+			gcc -o $(CRITERION) $(OBJ) tests/test.c $(CFLAGS) $(CUR) $(CRIT)
+			rm -f $(OBJ)
 			rm -f ../lib/my/libmy.a
 			rm -f lib/my/libmy.a
 			./$(CRITERION)
 
-coverage:	$(OBJC)
+coverage:	$(OBJ)
 			make -C ./lib/my
-			gcc -o $(CRITERION) $(OBJC) $(INC) $(LIB) $(CUR) $(CRIT)
-			rm -f $(OBJC)
+			gcc -o $(CRITERION) $(OBJ) tests/test.c $(CFLAGS) $(CUR) $(CRIT)
+			rm -f $(OBJ)
 			rm -f ../lib/my/libmy.a
 			rm -f lib/my/libmy.a
 			./$(CRITERION)
