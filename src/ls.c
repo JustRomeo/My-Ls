@@ -5,7 +5,7 @@
 ** ls.C
 */
 
-#include "include/prototype.h"
+#include "prototype.h"
 
 int ls(DIR *fd)
 {

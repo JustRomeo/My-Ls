@@ -5,7 +5,7 @@
 ** base.c
 */
 
-#include "include/prototype.h"
+#include "prototype.h"
 
 int my_ls(int ac, char **argv)
 {

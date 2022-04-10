@@ -5,7 +5,7 @@
 ** le god damn main
 */
 
-#include "include/prototype.h"
+#include "prototype.h"
 
 int main(int ac, char **argv)
 {

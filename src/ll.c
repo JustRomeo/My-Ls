@@ -5,7 +5,7 @@
 ** ll.c
 */
 
-#include "include/prototype.h"
+#include "prototype.h"
 
 static int glob = 0;
 

@@ -5,7 +5,7 @@
 ** HEADER
 */
 
-#include "include/prototype.h"
+#include "prototype.h"
 
 static int count = 1;
 static int tot = 0;

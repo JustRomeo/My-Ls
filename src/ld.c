@@ -5,7 +5,7 @@
 ** ld.c
 */
 
-#include "include/prototype.h"
+#include "prototype.h"
 
 int ld(DIR *fd)
 {

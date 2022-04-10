@@ -5,7 +5,7 @@
 ** ll_bis.c
 */
 
-#include "include/prototype.h"
+#include "prototype.h"
 
 int struct_malloc(printer strct)
 {

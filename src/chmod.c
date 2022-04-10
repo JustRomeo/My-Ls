@@ -5,11 +5,11 @@
 ** chmod checker
 */
 
-#include "include/prototype.h"
+#include "prototype.h"
 
 char *user_right(struct dirent *print, struct stat sb)
 {
-    char *str = malloc(sizeof(char) * 4); 
+    char *str = malloc(sizeof(char) * 4);
 
     if (sb.st_mode & S_IRUSR)
         str[0] = 'r';
@@ -29,7 +29,7 @@ char *user_right(struct dirent *print, struct stat sb)
 
 char *gr_right(struct dirent *print, struct stat sb)
 {
-    char *str = malloc(sizeof(char) * 5); 
+    char *str = malloc(sizeof(char) * 5);
 
     if (sb.st_mode & S_IRGRP)
         str[0] = 'r';
@@ -49,7 +49,7 @@ char *gr_right(struct dirent *print, struct stat sb)
 
 char *other_right(struct dirent *print, struct stat sb)
 {
-    char *str = malloc(sizeof(char) * 5); 
+    char *str = malloc(sizeof(char) * 5);
 
     if (sb.st_mode & S_IROTH)
         str[0] = 'r';

@@ -5,7 +5,7 @@
 ** check
 */
 
-#include "include/prototype.h"
+#include "prototype.h"
 
 int check_flag(char c, DIR *fd, char *filepath)
 {
